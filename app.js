@@ -1,4 +1,4 @@
-/* functions 
+/* functions ------------------------------------------------------------------
     > parameters - regular, default, ...rest 
     > arguments - regular, ...spread
     > return
@@ -24,10 +24,13 @@ display('Hello', 'Everyone', ...spreadPara, 'Mary', 'John', 'Smith');
     > *let vs var
 */
 
+
+console.log('1 ------------------------------------------------------------- ');
 // IIFE - immediatly invoked function expression
 (function () {
   console.log("This is IIFE");
 })();
+
 // IIFE > assign to variable to make function expression
 let greeting = (function () {
   let message = "Hello";
@@ -64,6 +67,8 @@ console.log(counter2()); // 11
 console.log(counter1()); // 2
 console.log(counter2()); // 12
 
+
+console.log('2 ------------------------------------------------------------- ');
 /* arrow function
   > single param
   > this
@@ -82,6 +87,8 @@ let helloObject = {
 helloObject.regularFunction("Smith");
 helloObject.arrowFunction("Smith");
 
+
+console.log('3 ------------------------------------------------------------- ');
 /* understanding JS `this` keyword
  * this = executing content of block scope
  */
@@ -130,6 +137,8 @@ sayCallHi.apply(undefined, ["Smith", "Lawyer"]); // undefined, Smith, undefined,
 sayCallHi.apply(person1, ["Smith", "Lawyer"]); // John, Smith, 21, Lawyer
 sayCallHi.apply(person2, ["Smith", "Doctor"]); // Will, Smith, 22, Doctor
 
+
+console.log('4 ------------------------------------------------------------- ');
 /* understanding `bind` method
  */
 let personFemale = {
@@ -141,12 +150,11 @@ let personFemale = {
 let personMale = {
   name: "John"
 };
-
 let getNameCopy = personFemale.getName.bind(personMale);
 console.log(getNameCopy);
 console.log(getNameCopy());
 
-/* Built-in functions 
+/* Built-in functions  --------------------------------------------------------
   > eval()
   > parseInt
   > parseFloat
